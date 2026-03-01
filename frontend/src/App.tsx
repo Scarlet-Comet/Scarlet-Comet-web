@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Orders from "./Orders/Orders";
 import OrderDetail from "./Orders/OrderDetail";
 import Products from "./Products/Products";
+import Home from "./Home/Home";
 
 function App() {
 
@@ -28,9 +29,11 @@ function App() {
           </div>
 
           <div className="header-links">
+            <Link to="/catalog">Catalog</Link>
             <Link to="/orders">Orders</Link>
             <Link to="/cart">Cart</Link>
             <Link to="/signin">Sign In</Link>
+            <Link to="/">Home</Link>
           </div>
         </header>
 
