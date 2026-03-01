@@ -4,6 +4,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Orders from "./Orders/Orders";
 import OrderDetail from "./Orders/OrderDetail";
+import Products from "./Products/Products";
 
 function App() {
 
@@ -55,77 +56,12 @@ function App() {
           <div className="content">
 
             <Routes>
+              <Route path="/" element={<Products />} />
 
-              {/* HOME PAGE (PRODUCT LIST) */}
-              <Route
-                path="/"
-                element={
-                  <ul className="products">
-
-                    <li>
-                      <div className="product">
-                        <img
-                          className="product-image"
-                          src="/images/d1.jpg"
-                          alt="product"
-                        />
-                        <div className="product-name">
-                          <Link to="/product">Slim Shirt</Link>
-                        </div>
-                        <div className="product-brand">Nike</div>
-                        <div className="product-price">$60</div>
-                        <div className="product-rating">
-                          4.5 Stars (10 Reviews)
-                        </div>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div className="product">
-                        <img
-                          className="product-image"
-                          src="/images/d1.jpg"
-                          alt="product"
-                        />
-                        <div className="product-name">
-                          <Link to="/product">Slim Shirt</Link>
-                        </div>
-                        <div className="product-brand">Nike</div>
-                        <div className="product-price">$60</div>
-                        <div className="product-rating">
-                          4.5 Stars (10 Reviews)
-                        </div>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div className="product">
-                        <img
-                          className="product-image"
-                          src="/images/d1.jpg"
-                          alt="product"
-                        />
-                        <div className="product-name">
-                          <Link to="/product">Slim Shirt</Link>
-                        </div>
-                        <div className="product-brand">Nike</div>
-                        <div className="product-price">$60</div>
-                        <div className="product-rating">
-                          4.5 Stars (10 Reviews)
-                        </div>
-                      </div>
-                    </li>
-
-                  </ul>
-                }
-              />
-
-              {/* ORDERS PAGE */}
               <Route path="/orders" element={<Orders />} />
 
-              {/* ORDER DETAIL */}
               <Route path="/order/:id" element={<OrderDetail />} />
-
+              
             </Routes>
 
           </div>
