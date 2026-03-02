@@ -52,6 +52,16 @@ function App() {
           <ul>
             <li><Link to="/">Pants</Link></li>
             <li><Link to="/">Shirts</Link></li>
+            {/* NEW NAV ITEMS */}
+            <li>
+              <Link to="/catalog" onClick={closeMenu}>Catalog</Link>
+            </li>
+            <li>
+              <Link to="/payment" onClick={closeMenu}>Payment</Link>
+            </li>
+            <li>
+              <Link to="/orders" onClick={closeMenu}>Orders</Link>
+            </li>
           </ul>
         </aside>
 
