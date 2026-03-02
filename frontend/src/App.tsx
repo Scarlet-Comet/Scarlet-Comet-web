@@ -8,6 +8,7 @@ import Home from "./Home/Home";
 import Products from "./Products/Products";
 import Payment from "./Payment/Payment";
 import Security from "./Security/Security";
+import Catalog from "./Catalog/Catalog";
 
 function App() {
 
