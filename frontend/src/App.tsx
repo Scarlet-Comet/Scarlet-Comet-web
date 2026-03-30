@@ -9,6 +9,8 @@ import Products from "./Products/Products";
 import Payment from "./Payment/Payment";
 import Security from "./Security/Security";
 import Catalog from "./Catalog/Catalog";
+import Cart from "./Cart/Cart";
+import SignIn from "./SignIn/SignIn";
 
 function App() {
 
@@ -28,10 +30,11 @@ function App() {
         <header className="header">
           <div className="brand">
             <button onClick={openMenu}>&#9776;</button>
-            <Link to="/">Group 6</Link>
+            <Link to="/">Scarlet Comet Web</Link>
           </div>
 
           <div className="header-links">
+            <Link to="/">Home</Link>
             <Link to="/catalog">Catalog</Link>
             <Link to="/orders">Orders</Link>
             <Link to="/cart">Cart</Link>
@@ -53,18 +56,13 @@ function App() {
           </button>
 
           <ul>
-            <li><Link to="/">Pants</Link></li>
-            <li><Link to="/">Shirts</Link></li>
-            {/* NEW NAV ITEMS */}
-            <li>
-              <Link to="/catalog" onClick={closeMenu}>Catalog</Link>
-            </li>
-            <li>
-              <Link to="/payment" onClick={closeMenu}>Payment</Link>
-            </li>
-            <li>
-              <Link to="/orders" onClick={closeMenu}>Orders</Link>
-            </li>
+            <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+            <li><Link to="/catalog" onClick={closeMenu}>Catalog</Link></li>
+            <li><Link to="/orders" onClick={closeMenu}>Orders</Link></li>
+            <li><Link to="/cart" onClick={closeMenu}>Cart</Link></li>
+            <li><Link to="/signin" onClick={closeMenu}>Sign In</Link></li>
+            <li><Link to="/payment" onClick={closeMenu}>Payment</Link></li>
+            <li><Link to="/security" onClick={closeMenu}>Security</Link></li>
           </ul>
         </aside>
 
@@ -74,18 +72,32 @@ function App() {
 
             <Routes>
 
-              {/* HOME PAGE (PRODUCT LIST) */}
-              <Route path="/" element={<Products />} />
+              {/* HOME PAGE */}
+              <Route path="/" element={<Home />} />
 
-              {/* ✅ CATALOG PAGE（只加这一条，不动其它） */}
+              {/* PRODUCTS PAGE */}
+              <Route path="/products" element={<Products />} />
+
+              {/* CATALOG PAGE */}
               <Route path="/catalog" element={<Catalog />} />
 
               {/* ORDERS PAGE */}
               <Route path="/orders" element={<Orders />} />
-              <Route path="/payment" element={<Payment />} />
 
               {/* ORDER DETAIL */}
               <Route path="/order/:id" element={<OrderDetail />} />
+
+              {/* PAYMENT PAGE */}
+              <Route path="/payment" element={<Payment />} />
+
+              {/* CART PAGE */}
+              <Route path="/cart" element={<Cart />} />
+
+              {/* SIGN IN PAGE */}
+              <Route path="/signin" element={<SignIn />} />
+
+              {/* SECURITY PAGE */}
+              <Route path="/security" element={<Security />} />
 
             </Routes>
 
@@ -94,7 +106,7 @@ function App() {
 
         {/* FOOTER */}
         <footer className="footer">
-          &copy; 2022 Group 6
+          &copy; 2025 Scarlet Comet Web
         </footer>
 
       </div>
